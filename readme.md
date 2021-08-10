@@ -18,7 +18,9 @@ Run these commands from the `frontend` folder.
 ## Assumptions
 
 ### Jenkins file
-The job is running on a server that already has access to aws with cli installed and access keys are configured.
+- The job is running on a server that already has access to aws with cli installed and access keys are configured.
+- The job is running on a server that already has docker installed.
+- AWS infra is already configured with required services(ECS, VPC, ECR).
 
 ### From the jenkins job we must pass the required variables: 
 - AWS specific variables: AWS_REGION, IMAGE_VERSION, DOCKER_REGISTRY, DOCKER_TAG, ECS_CLUSTER, ECS_SERVICE, TASK_FAMILY
