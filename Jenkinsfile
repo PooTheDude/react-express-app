@@ -18,11 +18,6 @@ def call(def pipelineParams) {
             CREDENTIALS="${pipelineParams.CREDENTIALS}"
             BRANCH = "${pipelineParams.BRANCH}"
             ENV = "${pipelineParams.ENV}"
-            POM_DIR = "${WORKSPACE}/${pipelineParams.POM_DIR}"
-            NAME = "${pipelineParams.NAME}"
-            PROJECT_NAME = "${pipelineParams.PROJECT_NAME}"
-            PROJECT_KEY = "${pipelineParams.PROJECT_KEY}"
-            SONAR_TOKEN = "sonar-report-token"
             RECIPIENT_LIST = "${pipelineParams.RECIPIENT_LIST}"
             }
     
@@ -61,8 +56,8 @@ def call(def pipelineParams) {
               steps {
                     echo 'start building docker image'
                     sh '''
-                        docker build -t ${DOCKER_REGISTRY}/${DOCKER_TAG}:${IMAGE_VERSION} -f app-module/Dockerfile .
-                    '''
+                        docker build -t ${DOCKER_REGISTRY}/${DOCKER_TAG}:${IMAGE_VERSION} 
+                        '''
                 }
             }
             
