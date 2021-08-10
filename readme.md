@@ -17,10 +17,10 @@ Run these commands from the `frontend` folder.
 
 ## Assumptions
 
-# Jenkins file
+### Jenkins file
 The job is running on a server that already has access to aws with cli installed and access keys are configured.
 
-# From the jenkins job we must pass the required variables: 
+### From the jenkins job we must pass the required variables: 
 - AWS specific variables: AWS_REGION, IMAGE_VERSION, DOCKER_REGISTRY, DOCKER_TAG, ECS_CLUSTER, ECS_SERVICE, TASK_FAMILY
 - GIT_REPO: Specify the repo where are app files lie to clone from
 - CREDENTIALS: The credentials of the git repo confugured in credential manager of jenkins.
